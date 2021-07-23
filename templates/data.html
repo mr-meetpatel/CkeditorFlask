@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ckeditor</title>
+    <script src="{{url_for('static',filename='js/ckeditor/ckeditor.js')}}"></script>
+    <script src="{{url_for('static',filename='js/jq.js')}}"></script>
+</head>
+
+<body>
+    <form>
+        <textarea name="editor1" class="data">{{data}}</textarea><br><br>
+
+    </form>
+
+    <script>
+        CKEDITOR.replace('editor1');
+    </script>
+</body>
+<script>
+
+    $(".data").blur(function () {
+        alert('Warning Don\'t try to switch screen');
+    })
+
+</script>
+
+</html>
